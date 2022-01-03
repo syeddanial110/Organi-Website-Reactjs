@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router, Routes,Route } from "react-router-dom";
+// import { Col, Container, Row } from 'react-bootstrap';
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Main from './components/Nav';
+import Home from './screens/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+  
+  <Header />
+
+  <Router>
+           <Main companyName="Orgino" />    
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+</Router>
+  <Footer companyName="Organi" number="0300-000000" address="Tum Hara Ghr" email="daniald3200@gmail.com" />
+</>
   );
 }
 
