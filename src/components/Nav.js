@@ -40,7 +40,7 @@ const Main = (props) => {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
-                                    <Link className='p-3 linkBtnHome linkBtn text-dark '  to="/home"><b>Home</b></Link>
+                                    <Link className='p-3 linkBtnHome linkBtn text-dark '  to="/homeblog"><b>Home</b></Link>
                                     <Link className='p-3 linkBtnHome linkBtn ' to="/shop">Shop</Link>
                                     <Link className='p-3 linkBtnHome linkBtn' to="/pages">Pages</Link>
                                     <Link className='p-3 linkBtnHome linkBtn' to="/blog">Blog</Link>

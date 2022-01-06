@@ -12,16 +12,19 @@ import hover from 'jquery';
 import card1 from "E:/React js/Classes/secondproject/src/assets/images/blog1.jpg"
 import card2 from "E:/React js/Classes/secondproject/src/assets/images/blog2.jpg"
 import card3 from "E:/React js/Classes/secondproject/src/assets/images/blog3.jpg"
+import Slider from '../components/Slider'
+import HomeBlog from '../components/HomeBlog'
 
 
-const Home = () => {
-    $(document).ready(function () {
-        $(".item1").hover(function () {
-            $(".fontHeart").css({
-                'opacity': '1'
-            })
-        })
-    });
+const Home = (props) => {
+    const {post}=props;
+    // $(document).ready(function () {
+    //     $(".item1").hover(function () {
+    //         $(".fontHeart").css({
+    //             'opacity': '1'
+    //         })
+    //     })
+    // });
 
 
     return (
@@ -100,7 +103,7 @@ const Home = () => {
                 </Col>
             </Row> */}
 
-            {/* First Item Row */}
+ {/* First Item Row */}
             <div className='container1'>
                 <Link to="/items"> <div className='item1'>
                     <FontAwesomeIcon className='fontHeart1' icon={faHeart} />
@@ -150,6 +153,7 @@ const Home = () => {
             </Row>
 
             <h1>Slider</h1>
+            {/* <Slider /> */}
 
 {/* Blogs */}
             <Row>
@@ -176,7 +180,9 @@ const Home = () => {
             <Row>
             <Col md={{offset:1}}>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={card1} />
+               {/* <Link to={`/homeblog/${post.id}`}>  */}
+               <Card.Img variant="top" src={card1} />
+               {/* </Link> */}
                 <Card.Body>
                 <Card.Subtitle className="mb-2 text-muted">  <FontAwesomeIcon  icon={faCalendar} /> 25 May</Card.Subtitle>
                     <Card.Title>
@@ -214,6 +220,11 @@ const Home = () => {
             <Col></Col>
             </Row>
             </div>
+
+
+
+           
+
         </div>
     )
 }
