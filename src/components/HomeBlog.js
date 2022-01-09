@@ -26,7 +26,7 @@ const HomeBlog = () => {
             {
                 post &&
                 <div>
-                    <Link to="/homeblog ">Home</Link>
+                    <Link to="/homeblog">Home</Link>
                     <div>
                         <img src={`${imgUrl}`} alt={`${post.title}`} />
                         <h1>{post.id}</h1>

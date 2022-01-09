@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import { Card, Carousel, Col, Container, Nav, Row } from 'react-bootstrap'
-import { faEnvelope, faUser, faHeart, faShoppingBag,faCalendar } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react'
+import { Card, Carousel, Col, Container, ListGroup, Nav, Row } from 'react-bootstrap'
+import { faEnvelope, faUser, faHeart, faShoppingBag, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 import Main from '../components/Nav'
@@ -14,10 +14,18 @@ import card2 from "E:/React js/Classes/secondproject/src/assets/images/blog2.jpg
 import card3 from "E:/React js/Classes/secondproject/src/assets/images/blog3.jpg"
 import Slider from '../components/Slider'
 import HomeBlog from '../components/HomeBlog'
-
+import meat1 from "E:/React js/Classes/secondproject/src/assets/images/meat1.jpg"
+import meat2 from "E:/React js/Classes/secondproject/src/assets/images/meat2.jpg"
+import meat3 from "E:/React js/Classes/secondproject/src/assets/images/meat3.jpg"
+import fruit1 from "E:/React js/Classes/secondproject/src/assets/images/fruit1.jpg"
+import fruit2 from "E:/React js/Classes/secondproject/src/assets/images/fruit2.jpg"
+import fruit3 from "E:/React js/Classes/secondproject/src/assets/images/fruit3.jpg"
+import burger from "E:/React js/Classes/secondproject/src/assets/images/burger.jpg"
+import fruit4 from "E:/React js/Classes/secondproject/src/assets/images/fruit4.jpg"
+import Rough from '../components/Rough'
 
 const Home = (props) => {
-    const {post}=props;
+    const { post } = props;
     // $(document).ready(function () {
     //     $(".item1").hover(function () {
     //         $(".fontHeart").css({
@@ -26,7 +34,98 @@ const Home = (props) => {
     //     })
     // });
 
+    // const []=useState();
 
+    // function filterdProducts(){
+    //     products.filter((categoryProduct)=>{
+    //         console.log(categoryProduct,"category product");
+    //         return categoryProduct(products.categoryProduct.category)
+    //     })
+    // }
+    const filterdProducts = (category) => {
+        console.log(products.filter((product) => product.category === category), "category");
+        // return products.filter((product)=> product.category === category)
+        setProductList(products.filter((product) => product.category === category))
+
+    }
+
+
+    const products = [
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-1.jpg.webp",
+            category: "meat",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        },
+
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-2.jpg",
+            category: "meat",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        },
+
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-3.jpg",
+            category: "meat",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        },
+
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-4.jpg",
+            category: "fruits",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        },
+
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-6.jpg",
+            category: "fruits",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        },
+
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-7.jpg",
+            category: "fruits",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        },
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-8.jpg",
+            category: "fruits",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        },
+        {
+            name: `Product ${getRandomNumbers(1, 10)}`,
+            image: "https://preview.colorlib.com/theme/ogani/img/featured/feature-6.jpg",
+            category: "fastFood",
+            price: `Price ${getRandomNumbers(100, 500)}`
+        }
+
+    ]
+
+    function getRandomNumbers(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+    }
+
+    const [productList, setProductList] = useState(products)
+
+
+    // javascript for active
+    // var header = document.getElementById("featuredProductUl");
+    // var btns = header.getElementsByClassName("featuredProductLi");
+    // for (var i = 0; i < btns.length; i++) {
+    //     btns[i].addEventListener("click", function () {
+    //         var current = document.getElementsByClassName("active");
+    //         current[0].className = current[0].className.replace(" active", "");
+    //         this.className += " active";
+    //     });
+    // }
     return (
         <div className='homeBody'>
 
@@ -42,14 +141,16 @@ const Home = (props) => {
                 </Col>
             </Row>
 
+{/* Horizontal Slider */}
             <Row>
                 <Col>
                     <h1 className='text-center'>Slider</h1>
+                    <Slider />
                 </Col>
 
             </Row>
 
-            <Row>
+            <Row className='mt-5'>
 
                 <Col md={12}>
                     <h1 className='text-center'>Featured Products</h1>
@@ -58,91 +159,44 @@ const Home = (props) => {
 
             </Row>
 
-            {/* <Nav
-                activeKey="/All"
-                onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
-                <Nav.Item>
-                    <Link to="/all">All</Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-1">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-2">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="disabled" disabled>
-                        Disabled
-                    </Nav.Link>
-                </Nav.Item>
-            </Nav> */}
-
             <Row>
-                <Col md={12}>
-                    <ul className='featuredProductUl '>
-                        <Link to="/All"> <li className='featuredProductLi'>All</li></Link>
-                        <li className='featuredProductLi'>Oranges</li>
-                        <li className='featuredProductLi'>Vine</li>
-                        <li className='featuredProductLi'>Apples</li>
-                    </ul>
+                <Col md={{span:4, offset:4}}>
+                    <ListGroup horizontal  className='featuredProductUl '>
+                        <ListGroup.Item variant='success' action className='featuredProductLi' onClick={() => { setProductList(products) }}>All</ListGroup.Item>
+                        <ListGroup.Item variant='success' action className='featuredProductLi' onClick={() => filterdProducts("fruits")} >Fruits</ListGroup.Item>
+                        <ListGroup.Item variant='success' action className='featuredProductLi' onClick={() => { filterdProducts("meat") }}>Meat</ListGroup.Item>
+                        <ListGroup.Item variant='success' action className='featuredProductLi' onClick={() => { filterdProducts("fastFood") }} >Fast Food</ListGroup.Item>
+                    </ListGroup>
                 </Col>
             </Row>
 
-            {/* <Row className='container1'>
-                <Col md={3} className='item1'>
-                <FontAwesomeIcon icon={faHeart} />
-                </Col>
-                <Col md={3} className='item2'>
-                    item2
-                </Col>
-                <Col md={3} className='item3'>
-                    item3
-                </Col>
-                <Col md={3} className='item4'>
-                    item4
-                </Col>
-            </Row> */}
+            {/*Featured Products Items  */}
+            <Row className='mb-2 p-5'>
 
- {/* First Item Row */}
-            <div className='container1'>
-                <Link to="/items"> <div className='item1'>
-                    <FontAwesomeIcon className='fontHeart1' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping1' icon={faShoppingBag} />
-                </div> </Link>
-                <div className='item2'>
-                    <FontAwesomeIcon className='fontHeart2' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping2' icon={faShoppingBag} />
-                </div>
-                <div className='item3'>
-                    <FontAwesomeIcon className='fontHeart3' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping3' icon={faShoppingBag} />
-                </div>
-                <div className='item4'
-                >  <FontAwesomeIcon className='fontHeart4' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping4' icon={faShoppingBag} />
-                </div>
-            </div>
+                {
+                    productList && productList.length > 0 &&
+                    productList.map((product, index) => {
+                        console.log(product, "product");
+                        return (<Col key={index} md={3}>
 
-            {/* Second item row */}
-            <div className='container1 container2'>
-                <Link to="/items"> <div className='item1'>
-                    <FontAwesomeIcon className='fontHeart1' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping1' icon={faShoppingBag} />
-                </div> </Link>
-                <div className='item2'>
-                    <FontAwesomeIcon className='fontHeart2' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping2' icon={faShoppingBag} />
-                </div>
-                <div className='item3'>
-                    <FontAwesomeIcon className='fontHeart3' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping3' icon={faShoppingBag} />
-                </div>
-                <div className='item4'
-                >  <FontAwesomeIcon className='fontHeart4' icon={faHeart} />
-                    <FontAwesomeIcon className='fontShopping4' icon={faShoppingBag} />
-                </div>
-            </div>
+                            <img src={product.image} />
+                            <p>{product.name}</p>
+                            <p>{product.price}</p>
+                        </Col>
+                        )
+                    })
+                }
 
+            </Row>
+
+
+
+
+
+
+
+
+            {/* Side by Side Images */}
             <Row>
                 <Col md={{ span: 4, offset: 1 }} className='bgImgSideBySide1'>
                     <button className='btn btn-success btnSidebySide1'>Shop Now</button>
@@ -152,10 +206,13 @@ const Home = (props) => {
                 </Col>
             </Row>
 
-            <h1>Slider</h1>
-            {/* <Slider /> */}
+            <Row className='mt-5 mb-5 p-3'>
+                <Col md={12}>
+                    <h1 className='text-center'>Slider</h1>
 
-{/* Blogs */}
+                </Col>
+            </Row>
+            {/* Blogs */}
             <Row>
 
                 <Col md={12}>
@@ -176,54 +233,57 @@ const Home = (props) => {
                 
                 </Col>
             </Row> */}
-            <div style={{marginTop:"45px"}}>
-            <Row>
-            <Col md={{offset:1}}>
-            <Card style={{ width: '18rem' }}>
-               {/* <Link to={`/homeblog/${post.id}`}>  */}
-               <Card.Img variant="top" src={card1} />
-               {/* </Link> */}
-                <Card.Body>
-                <Card.Subtitle className="mb-2 text-muted">  <FontAwesomeIcon  icon={faCalendar} /> 25 May</Card.Subtitle>
-                    <Card.Title>
-                        Some quick example text to build on the card title and make u
-                    </Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                </Card.Body>
-            </Card>
-            </Col> 
+            <div style={{ marginTop: "45px" }}>
+                <Row>
+                    <Col md={{ offset: 1 }}>
+                        <Card style={{ width: '18rem' }}>
+                            {/* <Link to={`/homeblog/${post.id}`}>  */}
+                            <Card.Img variant="top" src={card1} />
+                            {/* </Link> */}
+                            <Card.Body>
+                                <Card.Subtitle className="mb-2 text-muted">  <FontAwesomeIcon icon={faCalendar} /> 25 May</Card.Subtitle>
+                                <Card.Title>
+                                    Some quick example text to build on the card title and make u
+                                </Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-            <Col md={{offset:1}}>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={card2} />
-                <Card.Body>
-                <Card.Subtitle className="mb-2 text-muted">  <FontAwesomeIcon  icon={faCalendar} /> 25 May</Card.Subtitle>
-                    <Card.Title>
-                        Some quick example text to build on the card title and make u
-                    </Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                </Card.Body>
-            </Card>
-            </Col> 
-            <Col md={{offset:1}}>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={card3} />
-                <Card.Body>
-                <Card.Subtitle className="mb-2 text-muted">  <FontAwesomeIcon  icon={faCalendar} /> 25 May</Card.Subtitle>
-                    <Card.Title>
-                        Some quick example text to build on the card title and make u
-                    </Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                </Card.Body>
-            </Card>
-            </Col>  
-            <Col></Col>
-            </Row>
+                    <Col md={{ offset: 1 }}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={card2} />
+                            <Card.Body>
+                                <Card.Subtitle className="mb-2 text-muted">  <FontAwesomeIcon icon={faCalendar} /> 25 May</Card.Subtitle>
+                                <Card.Title>
+                                    Some quick example text to build on the card title and make u
+                                </Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={{ offset: 1 }}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={card3} />
+                            <Card.Body>
+                                <Card.Subtitle className="mb-2 text-muted">  <FontAwesomeIcon icon={faCalendar} /> 25 May</Card.Subtitle>
+                                <Card.Title>
+                                    Some quick example text to build on the card title and make u
+                                </Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col></Col>
+                </Row>
             </div>
 
-
-
-           
+{/* Vertical Slider */}
+            <Row>
+                <Col md={4}>
+                    <Rough />
+                </Col>
+            </Row>
 
         </div>
     )

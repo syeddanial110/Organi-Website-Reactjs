@@ -20,7 +20,7 @@
 }
 .container{
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr ;
     grid-template-columns: 200px 150px 600px 220px;
 }
 /* .active, .linkBtn:hover{

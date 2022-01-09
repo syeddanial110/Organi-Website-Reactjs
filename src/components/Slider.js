@@ -1,32 +1,71 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-
-
-export default class Fade extends Component {
+import card1 from "E:/React js/Classes/secondproject/src/assets/images/blog1.jpg"
+import card2 from "E:/React js/Classes/secondproject/src/assets/images/blog2.jpg"
+import card3 from "E:/React js/Classes/secondproject/src/assets/images/blog3.jpg"
+export default class Responsive extends Component {
   render() {
-    const settings = {
+    var settings = {
       dots: true,
-      fade: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     return (
       <div>
-        <h2>Fade</h2>
+        {/* <h2> Responsive </h2> */}
         <Slider {...settings}>
           <div>
-            <img src={"/abstract01.jpg"} alt="pic1" />
+           <img style={{ width: '18rem' }} src={card1} />
           </div>
           <div>
-            <img src={"/abstract02.jpg"} alt="pic2" />
+          <img style={{ width: '18rem' }} src={card2} />
           </div>
           <div>
-            <img src={"/abstract03.jpg"} alt="pic2" />
+          <img style={{ width: '18rem' }} src={card3} />
           </div>
           <div>
-            <img src={"/abstract04.jpg"} alt="pic2" />
+          <img style={{ width: '18rem' }} src={card1} />
+          </div>
+          <div>
+          <img style={{ width: '18rem' }} src={card2} />
+          </div>
+          <div>
+          <img style={{ width: '18rem' }} src={card3} />
+          </div>
+          <div>
+          <img style={{ width: '18rem' }} src={card1} />
+          </div>
+          <div>
+          <img style={{ width: '18rem' }} src={card2} />
           </div>
         </Slider>
       </div>

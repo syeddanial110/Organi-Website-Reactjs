@@ -19,7 +19,7 @@
 } */
 .bgImg{
     background-image: url('E:/React js/Classes/secondproject/src/assets/images/banner.jpg');
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -29,7 +29,7 @@
     padding: 85px 0px 0px 45px;
 }
 .featuredProductUl{
-    list-style: none;
+    /* list-style: none; */
     text-align: center;
     margin-top: 25px;
 }
@@ -37,11 +37,16 @@
     display: inline;
     padding: 20px;
     color: black;
+    border: none !important;
     
 }
-.featuredProductLi:hover{
-    color: green;
+/* .featuredProductLi:active{
+    background-color: black !important; 
+
 }
+.featuredProductLi:hover {
+    color: green !important;
+} */
 .container1{
     display: grid;
     grid-template-rows: 1fr;
@@ -49,36 +54,36 @@
     justify-content: center;
 }
 .item1{
-    background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit1.jpg");
+    /* background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 200px !important;
+    height: 200px !important; */
     position: relative;
 }
 .item2{
-    background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit2.jpg");
+    /* background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 200px !important;
+    height: 200px !important; */
     position: relative;
     
 }
 .item3{
-    background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit3.jpg");
+    /* background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 200px !important;
+    height: 200px !important; */
     position: relative;
 }
 .item4{
-    background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit4.jpg");
+    /* background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruit4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 200px !important;
+    height: 200px !important; */
     position: relative;
    
 }
