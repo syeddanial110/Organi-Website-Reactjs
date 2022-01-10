@@ -283,6 +283,12 @@ const Home = (props) => {
                 <Col md={4}>
                     <Rough />
                 </Col>
+                <Col md={4}>
+                    <Rough />
+                </Col>
+                <Col md={4}>
+                    <Rough />
+                </Col>
             </Row>
 
         </div>
