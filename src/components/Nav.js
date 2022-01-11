@@ -52,10 +52,10 @@ const Main = (props) => {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
                                     <Link className='p-3 linkBtnHome linkBtn text-dark ' to="/homeblog"><b>Home</b></Link>
-                                    <Link className='p-3 linkBtnHome linkBtn ' to="/shop">Shop</Link>
-                                    <Link className='p-3 linkBtnHome linkBtn' to="/pages">Pages</Link>
-                                    <Link className='p-3 linkBtnHome linkBtn' to="/blogs">Blog</Link>
-                                    <Link className='p-3 linkBtnHome linkBtn' to="/Contact">Contact</Link>
+                                    <Link className='p-3 linkBtnHome linkBtn text-dark' to="/shop"><b>Shop</b></Link>
+                                    {/* <Link className='p-3 linkBtnHome linkBtn text-dark' to="/pages"><b>Pages</b></Link> */}
+                                    <Link className='p-3 linkBtnHome linkBtn text-dark' to="/blogs"><b>Blog</b></Link>
+                                    <Link className='p-3 linkBtnHome linkBtn text-dark' to="/contact"><b>Contact</b></Link>
                                 </Nav>
                             </Navbar.Collapse>
                         </Container>
@@ -121,7 +121,7 @@ const Main = (props) => {
 
             </Row> */}
 
-{/*  */}
+            {/*  */}
             <div className='container'>
                 <div>
                     <Navbar bg="success" variant='dark' expand="lg">
@@ -129,7 +129,7 @@ const Main = (props) => {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
-                                    <NavDropdown onClick={()=>{setArrowToggle(!arrowToggle)}}  className='justify-content-center m-auto' title="All Departmants" id="basic-nav-dropdown">
+                                    <NavDropdown onClick={() => { setArrowToggle(!arrowToggle) }} className='justify-content-center m-auto' title="All Departmants" id="basic-nav-dropdown">
                                         {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -176,11 +176,13 @@ const Main = (props) => {
                     <input type="email" className="form-control w-75   searchInput" id="exampleInputEmail1" aria-describedby="emailHelp" value={search} onChange={(e) => { setSearch(e.target.value) }} />
                     <Button className='searchBtn px-4' variant="success">Success</Button>
                 </div>
+                <Container>
                 <div className='mt-2'>
                     <FontAwesomeIcon icon={faPhone} className='fs-4' />
                     <p className='text-center ' style={{ display: "inline" }}> 0300-000000 </p>
                     {/* <p className='text-center'>support 24/7</p> */}
                 </div>
+                </Container>
 
             </div>
 

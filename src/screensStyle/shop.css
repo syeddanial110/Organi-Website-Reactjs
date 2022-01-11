@@ -1,0 +1,15 @@
+.shopbg{
+    background-image: url("E:/React js/Classes/secondproject/src/assets/images/shopbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+}
+.shopHeading{
+   margin: auto;
+}
+.bgLink{
+   /* flex-direction: column; */
+}

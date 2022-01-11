@@ -10,6 +10,9 @@ import Blogs from './screens/Blogs';
 import Home from './screens/Home';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import Blog from './screens/Blog';
+import Shop from './screens/Shop';
+import Contact from './screens/Contact';
 
 
 function App() {
@@ -22,8 +25,11 @@ function App() {
            <Main companyName="Orgino" />    
       <Routes>
         <Route path="/homeblog" element={<Home />} />
-        <Route path="/homeblog/:postId" element={<HomeBlog />} />
+        {/* <Route path="/homeblog/:postId" element={<HomeBlog />} /> */}
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:blogsId" element={<Blog />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 </Router>
   <Footer companyName="Organi" number="0300-000000" address="Tum Hara Ghr" email="daniald3200@gmail.com" />

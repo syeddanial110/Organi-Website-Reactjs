@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
-import { Card, Carousel, Col, Container, ListGroup, Nav, Row } from 'react-bootstrap'
+import { Card, Carousel, Col, Container, ListGroup, Nav, Row, Stack } from 'react-bootstrap'
 import { faEnvelope, faUser, faHeart, faShoppingBag, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
@@ -22,7 +22,7 @@ import fruit2 from "E:/React js/Classes/secondproject/src/assets/images/fruit2.j
 import fruit3 from "E:/React js/Classes/secondproject/src/assets/images/fruit3.jpg"
 import burger from "E:/React js/Classes/secondproject/src/assets/images/burger.jpg"
 import fruit4 from "E:/React js/Classes/secondproject/src/assets/images/fruit4.jpg"
-import Rough from '../components/Rough'
+import Verticalsliders from '../components/VerticalSlider'
 
 const Home = (props) => {
     const { post } = props;
@@ -116,18 +116,9 @@ const Home = (props) => {
     const [productList, setProductList] = useState(products)
 
 
-    // javascript for active
-    // var header = document.getElementById("featuredProductUl");
-    // var btns = header.getElementsByClassName("featuredProductLi");
-    // for (var i = 0; i < btns.length; i++) {
-    //     btns[i].addEventListener("click", function () {
-    //         var current = document.getElementsByClassName("active");
-    //         current[0].className = current[0].className.replace(" active", "");
-    //         this.className += " active";
-    //     });
-    // }
+   
     return (
-        <div className='homeBody'>
+        <>
 
             <Row>
                 <Col md={{ span: 7, offset: 3 }} className='bgImg'>
@@ -279,19 +270,32 @@ const Home = (props) => {
             </div>
 
 {/* Vertical Slider */}
-            <Row>
+            {/* <Stack className='mx-3' direction="horizontal" gap={3}>
+               <div>
+                    <Verticalsliders />
+                    </div>
+                    <div>
+                    <Verticalsliders />
+                    </div>
+                    <div>
+                    <Verticalsliders />
+                    </div>
+            </Stack> */}
+          
+            <Row className='p-5'>
                 <Col md={4}>
-                    <Rough />
+                    <Verticalsliders />
                 </Col>
                 <Col md={4}>
-                    <Rough />
+                    <Verticalsliders />
                 </Col>
                 <Col md={4}>
-                    <Rough />
+                    <Verticalsliders />
                 </Col>
             </Row>
+         
 
-        </div>
+        </>
     )
 }
 

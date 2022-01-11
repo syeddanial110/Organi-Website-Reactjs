@@ -1,17 +1,27 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Card, Col, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const BlogItem = (props) => {
-    const {post} =props
+    const { post } = props
     return (
         <>
-            <Row>
-                <Col>
-                    <ul>
-                        <li>{post.title}</li>
-                        <img src={post.url} />
-                    </ul>
-                </Col>
+        <Row>
+            <Col md={{span:4, offset:1}} key={post.id} >
+                <Link to={`/blogs/${post.id}`} >
+                    <Card style={{ width: '18rem'  }} >
+                        <Card.Img variant="top" src={`https://picsum.photos/id/${post.id === 97 ? 101 : post.id === 86 ? 102 : post.id}/300/300`} />
+                        <Card.Body>
+                            <Card.Title>{post.id}</Card.Title>
+                            <Card.Text>
+                                {post.title}
+                            </Card.Text>
+                          
+                        </Card.Body>
+                    </Card>
+
+                </Link>
+            </Col>
             </Row>
         </>
     )
