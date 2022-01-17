@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import "../componentStyle/shopSlider.css"
 
 export default class MultipleItems extends Component {
   render() {

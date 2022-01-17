@@ -24,7 +24,7 @@ function App() {
   <Router>
            <Main companyName="Orgino" />    
       <Routes>
-        <Route path="/homeblog" element={<Home />} />
+        <Route path="/" element={<Home />} />
         {/* <Route path="/homeblog/:postId" element={<HomeBlog />} /> */}
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:blogsId" element={<Blog />} />

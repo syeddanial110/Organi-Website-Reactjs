@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import card1 from "E:/React js/Classes/secondproject/src/assets/images/blog1.jpg"
-import card2 from "E:/React js/Classes/secondproject/src/assets/images/blog2.jpg"
-import card3 from "E:/React js/Classes/secondproject/src/assets/images/blog3.jpg"
+import card1 from "../assets/images/blog1.jpg"
+// import card1 from "E:/React js/Classes/secondproject/src/assets/images/blog1.jpg"
+import card2 from "../assets/images/blog2.jpg"
+import card3 from "../assets/images/blog3.jpg"
 export default class Responsive extends Component {
   render() {
     var settings = {

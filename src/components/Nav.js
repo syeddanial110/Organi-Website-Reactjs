@@ -51,7 +51,7 @@ const Main = (props) => {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
-                                    <Link className='p-3 linkBtnHome linkBtn text-dark ' to="/homeblog"><b>Home</b></Link>
+                                    <Link className='p-3 linkBtnHome linkBtn text-dark ' to="/"><b>Home</b></Link>
                                     <Link className='p-3 linkBtnHome linkBtn text-dark' to="/shop"><b>Shop</b></Link>
                                     {/* <Link className='p-3 linkBtnHome linkBtn text-dark' to="/pages"><b>Pages</b></Link> */}
                                     <Link className='p-3 linkBtnHome linkBtn text-dark' to="/blogs"><b>Blog</b></Link>

@@ -5,3 +5,7 @@
     position: absolute ;
 
 }
+.sliderImages{
+    display: flex;
+    justify-content: center;
+}

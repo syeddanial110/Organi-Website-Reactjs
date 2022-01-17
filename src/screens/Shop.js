@@ -5,7 +5,7 @@ import "../screensStyle/shop.css"
 import { Link } from 'react-router-dom'
 import ShopSlider from "../components/ShopSlider"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList, faThLarge, faHeart, faShoppingBag, faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { faList, faThLarge, faHeart, faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import ShopPriceSlider from "../components/ShopPriceSlider"
 import ShopPopularSizes from "../components/ShopPopularSizes"
@@ -128,14 +128,16 @@ const Shop = () => {
                         <Row>
                             <Col md={12}>
                                 {
-                                    <Row xs={1} md={2} className="g-4">
+                                    <Row xs={1} md={3} className="g-4">
                                         {productImages.map((items, idx) => (
                                             <Col>
-                                                <Card>
+                                                <Card className='cardImage'>
                                                     <Card.Img variant="top" src={items} />
+                                                    <Card.Text className='fontShoppingBag'><FontAwesomeIcon icon={faShoppingBag} /> </Card.Text>
+                                                    <Card.Text className='fontShoppingCart'><FontAwesomeIcon icon={faShoppingCart} /> </Card.Text>
                                                     <Card.Body>
-                                                        <Card.Title>{`Product ${getRandomNumbers(1, 10)}`}</Card.Title>
-                                                        <Card.Text> {`Product Price ${getRandomNumbers(100, 500)}`}
+                                                        <Card.Title className='text-center'>{`Product ${getRandomNumbers(1, 10)}`}</Card.Title>
+                                                        <Card.Text className='text-center'> {`Price $ ${getRandomNumbers(100, 500)}`}
                                                         </Card.Text>
                                                     </Card.Body>
                                                 </Card>

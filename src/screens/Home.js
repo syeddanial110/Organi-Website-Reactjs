@@ -9,19 +9,19 @@ import "../screensStyle/home.css"
 import img1 from "../assets/images/banner.jpg";
 import $ from 'jquery';
 import hover from 'jquery';
-import card1 from "E:/React js/Classes/secondproject/src/assets/images/blog1.jpg"
-import card2 from "E:/React js/Classes/secondproject/src/assets/images/blog2.jpg"
-import card3 from "E:/React js/Classes/secondproject/src/assets/images/blog3.jpg"
+import card1 from "../assets/images/blog1.jpg"
+import card2 from "../assets/images/blog2.jpg"
+import card3 from "../assets/images/blog3.jpg"
 import Slider from '../components/Slider'
 import HomeBlog from '../components/HomeBlog'
-import meat1 from "E:/React js/Classes/secondproject/src/assets/images/meat1.jpg"
-import meat2 from "E:/React js/Classes/secondproject/src/assets/images/meat2.jpg"
-import meat3 from "E:/React js/Classes/secondproject/src/assets/images/meat3.jpg"
-import fruit1 from "E:/React js/Classes/secondproject/src/assets/images/fruit1.jpg"
-import fruit2 from "E:/React js/Classes/secondproject/src/assets/images/fruit2.jpg"
-import fruit3 from "E:/React js/Classes/secondproject/src/assets/images/fruit3.jpg"
-import burger from "E:/React js/Classes/secondproject/src/assets/images/burger.jpg"
-import fruit4 from "E:/React js/Classes/secondproject/src/assets/images/fruit4.jpg"
+import meat1 from "../assets/images/meat1.jpg"
+import meat2 from "../assets/images/meat2.jpg"
+import meat3 from "../assets/images/meat3.jpg"
+import fruit1 from "../assets/images/fruit1.jpg"
+import fruit2 from "../assets/images/fruit2.jpg"
+import fruit3 from "../assets/images/fruit3.jpg"
+import burger from "../assets/images/burger.jpg"
+import fruit4 from "../assets/images/fruit4.jpg"
 import Verticalsliders from '../components/VerticalSlider'
 
 const Home = (props) => {
