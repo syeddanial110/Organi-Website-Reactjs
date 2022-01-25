@@ -18,7 +18,7 @@
     color: white;
 } */
 .bgImg{
-    background-image: url('E:/React js/Classes/secondproject/src/assets/images/banner.jpg');
+    background-image: url('../assets/images/banner.jpg');
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: center;
@@ -146,7 +146,7 @@
     margin-top: 25px;
 }
 .bgImgSideBySide1{
-    background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruitsSidebySide1.png");
+    background-image: url("../assets/images/fruitsSidebySide1.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -157,7 +157,7 @@
     margin-top: 25vh;
 }
 .bgImgSideBySide2{
-    background-image: url("E:/React js/Classes/secondproject/src/assets/images/fruitsSidebySide1.png");
+    background-image: url("../assets/images/fruitsSidebySide1.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -169,7 +169,7 @@
 }
 
 .bgBlog1{
-    background-image: url('E:/React js/Classes/secondproject/src/assets/images/blog1.jpg');
+    background-image: url('../assets/images/blog1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -177,7 +177,7 @@
     margin-top: 55px;
 }
 .bgBlog2{
-    background-image: url('E:/React js/Classes/secondproject/src/assets/images/blog2.jpg');
+    background-image: url('../assets/images/blog2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -185,7 +185,7 @@
     margin-top: 55px;
 }
 .bgBlog3{
-    background-image: url('E:/React js/Classes/secondproject/src/assets/images/blog3.jpg');
+    background-image: url('../assets/images/blog3.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
