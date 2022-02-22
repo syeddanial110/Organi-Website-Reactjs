@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Organi-Website-Reactjs/static/css/main.b75e2b78.css",
+    "main.js": "/Organi-Website-Reactjs/static/js/main.9bc5d6b2.js",
+    "static/media/fruitsSidebySide1.png": "/Organi-Website-Reactjs/static/media/fruitsSidebySide1.154a37e5100470fc66c9.png",
+    "static/media/burger.jpg": "/Organi-Website-Reactjs/static/media/burger.a794d3de11efe4ac1410.jpg",
+    "static/media/blog3.jpg": "/Organi-Website-Reactjs/static/media/blog3.2538b1d8cffb98011a68.jpg",
+    "static/media/meat2.jpg": "/Organi-Website-Reactjs/static/media/meat2.32bc97fc8933026d30ac.jpg",
+    "static/media/fruit2.jpg": "/Organi-Website-Reactjs/static/media/fruit2.12e7ca8af4ee7cb6e281.jpg",
+    "static/media/banner.jpg": "/Organi-Website-Reactjs/static/media/banner.8c2a5d282c8a38debf66.jpg",
+    "static/media/fruit3.jpg": "/Organi-Website-Reactjs/static/media/fruit3.e901791619695b57ff44.jpg",
+    "static/media/meat3.jpg": "/Organi-Website-Reactjs/static/media/meat3.3a848a04312b79f9afb2.jpg",
+    "static/media/meat1.jpg": "/Organi-Website-Reactjs/static/media/meat1.d304d8f4cf6ce9effa8e.jpg",
+    "static/media/fruit4.jpg": "/Organi-Website-Reactjs/static/media/fruit4.60e1724981c36d380897.jpg",
+    "static/media/blog2.jpg": "/Organi-Website-Reactjs/static/media/blog2.9368742e74646843d028.jpg",
+    "static/media/blog1.jpg": "/Organi-Website-Reactjs/static/media/blog1.1fa6ab0d2a868d82fcc7.jpg",
+    "static/media/fruit1.jpg": "/Organi-Website-Reactjs/static/media/fruit1.8a251f64449426c281e9.jpg",
+    "static/media/shopbg.jpg": "/Organi-Website-Reactjs/static/media/shopbg.217f70f556364faea8c8.jpg",
+    "static/media/slick.svg": "/Organi-Website-Reactjs/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Organi-Website-Reactjs/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Organi-Website-Reactjs/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Organi-Website-Reactjs/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Organi-Website-Reactjs/index.html",
+    "main.b75e2b78.css.map": "/Organi-Website-Reactjs/static/css/main.b75e2b78.css.map",
+    "main.9bc5d6b2.js.map": "/Organi-Website-Reactjs/static/js/main.9bc5d6b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b75e2b78.css",
+    "static/js/main.9bc5d6b2.js"
+  ]
+}
