@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Blog from './screens/Blog';
 import Shop from './screens/Shop';
 import Contact from './screens/Contact';
+import Rough from './screens/Rough';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/blogs/:blogsId" element={<Blog />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/rough" element={<Rough />} /> */}
       </Routes>
 </Router>
   <Footer companyName="Organi" number="0300-000000" address="Adress Here plz" email="daniald3200@gmail.com" />

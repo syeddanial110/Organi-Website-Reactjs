@@ -56,6 +56,7 @@ const Main = (props) => {
                                     {/* <Link className='p-3 linkBtnHome linkBtn text-dark' to="/pages"><b>Pages</b></Link> */}
                                     <Link className='p-3 linkBtnHome linkBtn text-dark' to="/blogs"><b>Blog</b></Link>
                                     <Link className='p-3 linkBtnHome linkBtn text-dark' to="/contact"><b>Contact</b></Link>
+                                    {/* <Link className='p-3 linkBtnHome linkBtn text-dark' to="/rough"><b>Rough</b></Link> */}
                                 </Nav>
                             </Navbar.Collapse>
                         </Container>
